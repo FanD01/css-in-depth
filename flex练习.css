@@ -1,0 +1,126 @@
+:root{
+    box-sizing: border-box;
+}
+*,::before,::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #709b90;
+    font-family: Helvetica,Arial,sans-serif;
+}
+body * + *{
+    margin-top: 1.5em;
+}
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+/*以上代码为全局设置样式，包括盒模型设置，页面背景，页面字体，全局上边距，最大容器尺寸以及页面居中设置*/
+.site-nav{
+    display: flex;
+    padding: 0.5em;
+    list-style-type: none;
+    background-color: #5f4b44;
+    border-radius: 0.5em;
+}
+.site-nav > li{
+    margin-top: 0;
+}
+.site-nav > li > a{
+    display: block;
+    padding: 0.5em 1em;
+    background-color: #cc6b5a;
+    color: #eeeeee;
+    text-decoration: none;
+}
+/*以上代码处理导航栏里的三个层级元素，site-nav列表（弹性容器），列表项（弹性子元素），内部的锚点标签（链接）*/
+.site-nav > li + li{/*选中所有前面有列表项的列表项，也就是说除了第一项之外所有的列表项*/
+    margin-left: 1.5em;
+}
+.site-nav > .nav-right{
+    margin-left: auto;/*弹性容器内的auto外边距会填充所有可用空间*/
+}
+.tile{
+    padding: 1.5em;
+    background-color: #ffffff;
+}
+.flex{/*将主容器设置为Flexbox*/
+    display: flex;
+}
+.flex > * + *{/*去掉顶部边距，为每个弹性子元素之间加上间隔*/
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+/*以下两块代码处理flex属性下的列宽*/
+.column-main{
+    flex: 2;
+}
+.column-sidebar{/*将sidebar变成弹性容器*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.column-sidebar > .tile{
+    flex: 1;
+}
+.login-form h3{
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+.login-form input:not([type=checkbox]):not([type=radio]){
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+.login-form button{
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: #eeeeee;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+.centered{
+    text-align: center;
+}
+.cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.7;
+}
+.cost > span{
+    margin-top: 0;
+}
+.cost-currency{
+    font-size: 2rem;
+}
+.cost-dollars{
+    font-size: 4rem;
+}
+.cost-cent{
+    font-size: 1.5rem;
+    align-self: flex-start;/*覆盖这个子元素的align-items，将其与容器对齐，而不是中间对齐*/
+}
+.cta-button{
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
