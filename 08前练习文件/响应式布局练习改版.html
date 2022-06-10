@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>响应式布局改版</title>
+    <link rel="stylesheet" href="Responsive_alter.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" ><!--链接到bootstrap-->
+</head>
+<body>
+<header id="header" class="page-header">
+    <div class="title">
+        <h2>Fan D's Portfolio</h2>
+    </div>
+</header>
+<div class="dividing-header"></div>
+<nav class="menu" id="main-menu">
+    <button class="menu-toggle" id="toggle-menu">
+        toggle menu
+    </button>
+    <div class="menu-dropdown">
+        <ul class="nav-menu">
+            <li><a href="/UX_design.html">UX</a></li>
+            <li><a href="/UI_design.html">UI</a></li>
+            <li><a href="/Industrial_design.html">Industrial</a></li>
+            <li><a href="/Web_design.html">Web</a></li>
+        </ul>
+    </div>
+</nav>
+<main id="main">
+    <div class="row">
+        <selection class="column">
+            <img class="bigImage" src="images_02/building_1.jpeg" alt="building_1">
+            <h2 class="subtitle">Web Design portfolio</h2>
+            <p>
+                Welcome to Wombat Coffee Roasters! We are passionate about our craft,striving to bring you the best hand-craft coffee in the city.
+            </p>
+        </selection>
+        <section class="column">
+            <img class="bigImage" src="images_02/building_2.jpeg" alt="building_2">
+            <h2 class="subtitle">UI Deesign Portfolio</h2>
+            <p>
+                Welcome to Wombat Coffee Roasters! We are passionate about our craft,striving to bring you the best hand-craft coffee in the city.
+            </p>
+        </section>
+        <section class="column">
+            <img class="bigImage" src="images_02/building_1.jpeg" alt="building_1">
+            <h2 class="subtitle">UX Design Portfolio</h2>
+            <p>
+                Welcome to Wombat Coffee Roasters! We are passionate about our craft,striving to bring you the best hand-craft coffee in the city.
+            </p>
+        </section>
+    </div>
+</main>
+<!--以下页脚套用bootstrap-->
+<footer class="bg-dark text-light text-center text-lg-start">
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-md-9 mb-2">
+                <h5 class="text-uppercase">Contact Me</h5>
+                <p>This web build for dispaly my protfolio</p>
+            </div>
+            <div class="col-md-3 mb-2">
+                <h2 class="text-uppercase mb-0">Links</h2>
+                <ul class="list-unstyled">
+                    <li><a href="https://twitter.com/wancheng970724" class="text-light">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/in/fan-d-071bb4206/" class="text-light"></a>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-2">粤ICP备2022031041号<a href="beian.miit.gov.cn" class="text-primary"></a></div>
+</footer>
+<script type="text/javascript">
+    (function(){
+        var button = document.getElementById('toggle-menu');
+        button.addEventListener('click', function(event){
+            event.preventDefault();
+            var menu = document.getElementById('main-menu');
+            menu.classList.toggle('is-open')
+        })
+    })();
+</script>
+<script src="js/bootstrap.bundle.min.js" ></script><!--链接到bootstrap-->
+</body>
+</html>
