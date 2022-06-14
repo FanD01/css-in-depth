@@ -40,8 +40,6 @@ p{
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
-
-
 .nav-container{
     background-color: var(--medium-green);
 }
@@ -49,7 +47,7 @@ p{
     display: flex;
     justify-content: space-between;
     max-width: 1080px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0.625em 0;
 }
 .home-link{
@@ -58,7 +56,7 @@ p{
     font-family: Georgia, serif;
     font-weight: bold;
     text-decoration: none;
-
+    margin-left: 0.75em;
 }
 .top-nav{
     display: flex;
@@ -122,11 +120,13 @@ p{
     margin: 0 auto;
     max-width: 1080px;
 }
-.tile-row{
-    display: flex;
-}
-.tile-row > *{
-    flex: 1;
+@media (min-width: 35em){
+    .container{
+        display: flex;
+    }
+    .tile-row > *{
+        flex: 1;
+    }
 }
 .tile-row > * + *{
     margin-left: 1.5625em;
@@ -138,6 +138,10 @@ p{
 }
 .tile > h4{
     margin-top: 1.5em;
+}
+.tile .button{
+    border-radius: 0.2em;
+    border: 1px solid var(--brand-green);
 }
 .page-footer{
     margin-top: 3em;
