@@ -17,7 +17,7 @@ html{
 }
 body{
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     line-height: 1.4;
     background-color: var(--extras-light-gray);
 }
